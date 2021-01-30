@@ -188,7 +188,6 @@ address {
   padding-bottom:20%;
   position: relative;
   height: 0;
-  /* height: 20%; */
   width: 30%;
 }
 
@@ -210,7 +209,7 @@ address {
 
 .footer-container {
   display: flex;
-  min-width: 400px;
+  min-width: 320px;
   max-width: 800px;
   margin: 0 auto;
   justify-content: center;
@@ -266,14 +265,27 @@ address {
   color: #fff;
 }
 
+/* 画面サイズが320pxまではここを読み込む */
+@media screen and (max-width:320px) {
+  ul {
+    margin: 0.5em 0;
+    font-size: 11px;
+  }
+
+  .footer-body {
+    padding-top: 14px;
+  }
+}
+
 /* 画面サイズが480pxまではここを読み込む */
-@media screen and (max-width:480px) {
+@media screen and (min-width:321px) and (max-width:480px) {
   h2 img {
     max-width: 38vw;
   }
 
   ul {
     margin: 0.5em 0;
+    font-size: 14px;
   }
 
   .footer-body {
@@ -287,6 +299,26 @@ address {
   .gmap_canvas {
     width: 200px;
     height: 200px;
+  }
+
+  .access-row {
+    display: block;
+  }
+
+  .access-row .access-address {
+    max-width: 300px;
+    margin: 0 auto 50px;
+    text-align: center;
+  }
+
+  .access-row .access-map {
+    max-width: 300px;
+    margin: 0 auto 50px;
+  }
+
+  .access-map {
+    padding-bottom: 50%;
+    width: 50%;
   }
 }
 
